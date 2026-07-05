@@ -5,5 +5,5 @@
   "type": "module",
   "description": "Disposable Sentinel pr-strategy live-run target. One deliberately-outdated dependency + a real dependency-free node:test gate emitting TAP evidence.",
   "scripts": { "test": "node --test verify.js" },
-  "dependencies": { "picocolors": "1.1.0" }
+  "dependencies": { "picocolors": "1.1.1" }
 }
