@@ -1,0 +1,3 @@
+# sentinel-live-target
+
+This is a disposable, throwaway target repository for exercising [Sentinel](https://github.com/scipios-dev/sentinel), an agentic dependency-maintenance tool, against a real GitHub remote. Its sole purpose is to receive automated dependency-bump pull requests from Sentinel's pr-strategy live runs: it ships one deliberately-outdated dependency (`dayjs`, pinned one patch behind) and a real, dependency-free `node:test` verification gate (`verify.js`) that emits genuine TAP evidence, so Sentinel's Validator can prove the bump on a fresh clone with no `npm install`. Nothing here is precious — the repo can be deleted and re-seeded at any time.

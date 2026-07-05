@@ -1,0 +1,9 @@
+{
+  "name": "sentinel-live-target",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Disposable Sentinel pr-strategy live-run target. One deliberately-outdated dependency (dayjs, 1 patch behind) + a real dependency-free node:test gate emitting TAP evidence.",
+  "scripts": { "test": "node --test verify.js" },
+  "dependencies": { "dayjs": "1.11.20" }
+}
