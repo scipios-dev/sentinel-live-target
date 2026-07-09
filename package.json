@@ -3,7 +3,11 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "description": "Disposable Sentinel pr-strategy live-run target. One deliberately-outdated dependency + a real dependency-free node:test gate emitting TAP evidence.",
-  "scripts": { "test": "node --test verify.js" },
-  "dependencies": { "picocolors": "1.1.1" }
+  "description": "Disposable Sentinel breaking-change acceptance target. A deliberately-outdated dep (@sentinel-fixture/break@0.1.0, default export) whose 0.2.0 removes the default in favor of a named export. The gate is a real hermetic check (vendored-tarball extract + import + assert) that FAILS unless the source import is adapted default -> named. Proves Sentinel's Patcher edits SOURCE to adapt to a breaking bump (not a no-code Dependabot bump).",
+  "scripts": {
+    "test": "node --test gate.mjs"
+  },
+  "dependencies": {
+    "@sentinel-fixture/break": "0.1.0"
+  }
 }
